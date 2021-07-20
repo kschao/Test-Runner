@@ -7,4 +7,3 @@ class AI(Player):
         pass
 
     def gesturerandomizer: #Will need to finish this
-        
