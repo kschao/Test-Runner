@@ -7,3 +7,5 @@ game_one.run_game()
 player1 = Player("fred")
  
 player1.choose_gesture()
+
+print("The End")
