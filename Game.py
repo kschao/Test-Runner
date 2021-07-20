@@ -8,7 +8,7 @@ class Game:
         self.player2 = None     #Look at above comment. Would this be self.ai and self.human or just self.player?
 
     def run_game(self):
-        self.display_welcom()
+        self.display_welcome()
         self.display_rules()
         self.player1.choose_gesture()
         print(self.player1.chosen_gesture)
@@ -21,14 +21,31 @@ class Game:
 
     
     def display_rules(self):
-        print("Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock")
+        print("Here are the rules to the game:")
+        print("Rock crushes Scissors")
+        print("Scissors cuts Paper")
+        print("Paper covers Rock")
+        print("Rock crushes Lizard")
+        print("Lizard poisons Spock")
+        print("Spock smashes Scissors")
+        print("Scissors decapitates Lizard") 
+        print("Lizard eats Paper")
+        print("Paper disproves Spock")
+        print("Spock vaporizes Rock")
 
     # def play(self):
-    # Where player will select single or multi player game
+    def type_of_player(self):
+        player_choice = input("Enter 'single' for single player or 'multi' for multiple players: ")
+        if player_choice == 'single':
+            print("single player!")
+        elif player_choice == 'multi':
+            print("multi-player!")
+        else:
+            print("Please make a selection.")
+# Where player will select single or multi player game
     # Will need to figure out this part
     # Where we keep track of scores?
-
-
+  
     def display_winner(self):
         if (self.human.score > self.ai.score):
             print("Human wins!")
