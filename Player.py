@@ -1,17 +1,17 @@
-#class Player:
-#def __init__(self):
-#self.name = "string"
-#self.gesture = "list"
-#self.score = (int)
+class Player:
+def __init__(self):
+self.name = "string"
+self.gesture = "list"
+self.score = (int)
 
 
 
 
 def play(): # We will need to add in 'l' = lizard and 's' = spock. Since there are 2 with 's', this might confuse the code. could we number them instead? 
-    user = input("What is your choice? 'r' = rock, 'p' = paper, or 's' = scissor ???")
+    user = input("What is your choice? 'r' = rock, 'p' = paper, 's' = scissor, 'l' = lizard, or 'v' = spock???")
     user = user.lower()
 
-    computer = random.choice(['r', 'p', 's'])
+    computer = random.choice(['r', 'p', 's', 'l', 'v'])
 
     if user == computer:
         return (0, user, computer)
@@ -24,7 +24,7 @@ def play(): # We will need to add in 'l' = lizard and 's' = spock. Since there a
 
 
 def the_winner(player, opponent):
-        if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+        if (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r') or (player == 'r' and opponent == 'l') or (player == 'l' and opponent == 'v') or (player == 'v' and opponent == 's' or (player == 's' and opponent == 'l') or (player == 'l' and opponent == 'p') or (player == 'p' and opponent == 'v') or (player == 'v' and opponent == 'r') or (player == 'r' and opponent == 's')) :
             return True
 
         return False
