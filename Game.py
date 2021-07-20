@@ -11,21 +11,23 @@ class Game:
         self.display_welcom()
         self.player1.choose_gesture()
         print(self.player1.chosen_gesture)
-        # self.display_welcome()
+        self.display_winner()
         # self.play() #?
-        # self.display_winnter()
+        
 
     def display_welcome(self):
         print(f"Welcome to the game of RPSLS!")
 
 
     # def play(self):
-    #     # Will need to figure out this part
+    # Will need to figure out this part
+    # Where we keep track of scores?
 
-    # def display_winner(sel):
-    #     if (self.human.score > self.ai.score):
-    #         print "Human wins!"
-    #     elif (self.human.score < self.ai.score):
-    #         print "AI wins!"
-    #     else
-    #         print "It's a tie. Play again!"
+
+    def display_winner(self):
+        if (self.human.score > self.ai.score):
+            print("Human wins!")
+        elif (self.human.score < self.ai.score):
+            print("AI wins!")
+        else:
+            print("It's a tie. Play again!")
