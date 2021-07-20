@@ -9,6 +9,7 @@ class Game:
 
     def run_game(self):
         self.display_welcom()
+        self.display_rules()
         self.player1.choose_gesture()
         print(self.player1.chosen_gesture)
         self.display_winner()
@@ -18,8 +19,12 @@ class Game:
     def display_welcome(self):
         print(f"Welcome to the game of RPSLS!")
 
+    
+    def display_rules(self):
+        print("Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock")
 
     # def play(self):
+    # Where player will select single or multi player game
     # Will need to figure out this part
     # Where we keep track of scores?
 
