@@ -1,7 +1,9 @@
+
+
 class Player:
     def __init__(self,name):
         self.name = name
-        self.gestures_list = []
+        self.gestures_list = ["rock","paper","scissor","lizard","spock"]
         self.score = 0
         self.chosen_gesture = None
 
@@ -20,6 +22,7 @@ class Player:
       print("you have chosen spock")
      return gesture_choice
       
+
 
 
 
